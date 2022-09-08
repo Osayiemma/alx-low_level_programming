@@ -1,10 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - print the project function
+ * main - printing the project function
  *
- * Decription: this program prints Programming is like building a multilingual puzzle
- * Return: 0
+ * Decription: this program prints
+ *programming is like building a multilingual puzzle
+ *
+ *Return: 0
  */
 int main(void)
 {
