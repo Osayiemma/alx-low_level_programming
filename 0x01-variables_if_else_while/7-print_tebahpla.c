@@ -1,15 +1,15 @@
 #include <stdio.h>
 /**
- * main - prints the numbers from 0 to 9
+ * main - prints the alphabet at reverse
  *
  * Return: 0
  */
 int main(void)
 {
-int i;
-for (i = '0'; i <= '9'; i++)
+char c;
+for (c = 'z'; c >= 'a'; c--)
 {
-	putchar(i);
+	putchar(c);
 }
 putchar('\n');
 return (0);
