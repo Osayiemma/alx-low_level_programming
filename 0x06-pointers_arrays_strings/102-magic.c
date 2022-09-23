@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+ * prints_number - prints integer
+ * @n: integer to be printed
+ *
+ * Return: Always 0
+ */
+
 int main(void)
 {
 	int n;
