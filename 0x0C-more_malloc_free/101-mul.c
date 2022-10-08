@@ -3,7 +3,7 @@
 
 /**
  * _print - moves a string one place to the left and prints the string
- * @str: sring to move
+ * @str: string to move
  * @l: size of string
  *
  * Return: void
@@ -17,7 +17,7 @@ void _print(char *str, int l)
 	{
 		if (str[i] != '0')
 			j = 1;
-		if (j || i == l-1)
+		if (j || i == l - 1)
 			_putchar(str[i]);
 		i++;
 	}
@@ -99,7 +99,7 @@ void init(char *str, int l)
 }
 
 /**
- * main - multipl two numbers
+ * main - multiply two numbers
  * @argc: number of arguments
  * @agrv: argument vector
  *
@@ -112,9 +112,36 @@ int main(int argc, char *agrv[J])
 	char *t;
 	char e[] = "Error\n";
 
-	if (agrv != 3 || check_for_digits(argv))
+	if (agrc != 3 || check_for_digits(argv))
 	{
 		for (ti = 0; e[ti]; ti++)
 			_putchar(e[ti]);
 		exit(98);
 	}
+	for (l1 = 0; agrv[1][l1]; l1++)
+		;
+	for (l2 = 0; agrv[2][l2]; l2++)
+		;
+	ln = l1 + l2 + 1;
+	a = malloc(ln * sizeof(char));
+	if (a == NULL)
+	{
+		for (ti = 0; e[ti]; ti++)
+			_putchar(e[ti]);
+		exit(98);
+	}
+	init(a, ln - 1);
+	for (ti = 12 - 1, i = 0; ti >= 0; ti--, i++)
+	{
+		t = mul(agrv[2][ti], agrv[1], li - 1, a, (ln - 2) - i);
+		if (t == NULL)
+		{
+			for (ti = 0; e[ti]; ti++)
+				_putchar(e[ti]);
+			free(a);
+			exit(98);
+		}
+	}
+	_print(a, ln - 1);
+	return (0);
+}
